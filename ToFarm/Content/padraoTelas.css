@@ -1,0 +1,17 @@
+﻿body {
+    background-color: #F5F0DD;
+}
+
+.titulo {
+    background-color: #D2DBCA;
+    width: 15% 100%;
+    padding: 1% 0% 1% 4%;
+    margin-bottom: 4%;
+}
+
+.label-msg {
+    background-color: #282828;
+    padding: 3% 3% 3% 3%;
+    color: #F5F0DD;
+    border-radius: 20%;
+}
