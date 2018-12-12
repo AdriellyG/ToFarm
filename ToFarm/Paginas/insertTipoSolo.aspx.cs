@@ -14,6 +14,7 @@ public partial class Paginas_insertTipoSolo : System.Web.UI.Page
 
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
+        string mensagem;
         TipoSolo tipo = new TipoSolo();
 
         tipo.Nome = txtNome.Text;
@@ -21,13 +22,14 @@ public partial class Paginas_insertTipoSolo : System.Web.UI.Page
 
         if (TipoSoloDB.Insert(tipo))
         {
-            lbl.Text = "Cadastrado com sucesso!";
+            mensagem = "Cadastrado com sucesso!";
             txtNome.Text = "";
             txtAcidez.Text = "";
             txtNome.Focus();
         }
         else
-            lbl.Text = "Erro!";
+            mensagem = "Erro!";
+        Response.Write("<script language='javascript'>alert('" + mensagem + "');</script>");
 
     }
 }

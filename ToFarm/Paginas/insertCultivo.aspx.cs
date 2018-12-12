@@ -23,6 +23,7 @@ public partial class Paginas_insertCultivo : System.Web.UI.Page
 
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
+        string mensagem;
         Cultivo cul = new Cultivo();
         cul.Nome = txtNome.Text;
 
@@ -33,11 +34,12 @@ public partial class Paginas_insertCultivo : System.Web.UI.Page
                  
         if (CultivoDB.Insert(cul))
         {
-            lbl.Text = "Cadastrado com sucesso!";
+            mensagem = "Cadastrado com sucesso!";
             txtNome.Text = "";
             txtNome.Focus();
         }
         else
-            lbl.Text = "Erro!";
+            mensagem = "Erro!";
+        Response.Write("<script language='javascript'>alert('" + mensagem + "');</script>");
     }
 }

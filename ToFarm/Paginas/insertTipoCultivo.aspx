@@ -16,12 +16,5 @@
             <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" CssClass="btn btn-success" OnClick="btnCadastrar_Click"/>
             <a class="btn btn-primary" href="exibirTipoCultivo.aspx">Voltar</a>
         </div>
-
-        <script type="JavaScript">
-            function mensagemSucesso(stringMensagem, Pagina){
-                  alert(stringMensagem);
-                  location.href=Pagina;
-            }
-        </script>
     </div>
 </asp:Content>

@@ -31,6 +31,22 @@ public class ProdutoDB
         }
     }
 
+    public static DataSet SelectAllGrid()
+    {
+        DataSet ds = new DataSet();
+        System.Data.IDbConnection objConexao;
+        System.Data.IDbCommand objCommand;
+        System.Data.IDataAdapter objDataAdapter;
+        objConexao = Mapped.Connection();
+        objCommand = Mapped.Command("SELECT c.pro_nome as Nome, t.tip_nome as Tipo FROM pro_produto c inner join tip_tipo_produto t on t.tip_id = c.tip_id", objConexao);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        objDataAdapter.Fill(ds);
+        objConexao.Close();
+        objCommand.Dispose();
+        objConexao.Dispose();
+        return ds;
+    }
+
     // selectall
     public static DataSet SelectAll()
     {

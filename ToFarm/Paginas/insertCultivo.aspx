@@ -20,9 +20,5 @@
             <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" CssClass="btn btn-success" OnClick="btnCadastrar_Click"/>
             <a class="btn btn-primary" href="exibirCultivo.aspx">Voltar</a>
         </div>
-        <div class="col-md-5">
-            <br />
-            <asp:Label ID="lbl" CssClass="label-msg" runat="server"></asp:Label>
-        </div>
     </div>
 </asp:Content>

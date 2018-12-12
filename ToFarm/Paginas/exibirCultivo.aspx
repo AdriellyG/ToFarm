@@ -80,7 +80,9 @@
             padding: 1%;
         }
     </style>
-    <h1 class="jumbotron">Listar cultivos</h1>
+    <div class="titulo">
+        <h2>Listar cultivos</h2>
+    </div>
     <div class="container">
         
         <div class="col-md-12">

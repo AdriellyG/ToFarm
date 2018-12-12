@@ -30,6 +30,7 @@ public partial class Paginas_insertArea : System.Web.UI.Page
 
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
+        string mensagem;
         Area area = new Area();
         area.Nome = txtNome.Text;
 
@@ -45,13 +46,14 @@ public partial class Paginas_insertArea : System.Web.UI.Page
 
         if (AreaDB.Insert(area))
         {
-            lbl.Text = "Cadastrado com sucesso!";
+            mensagem = "Cadastrado com sucesso!";
             txtNome.Text = "";
             ddlLocal.SelectedIndex = 0;
             ddlTipo.SelectedIndex = 0;
             txtNome.Focus();
         }
         else
-            lbl.Text = "Erro!";
+            mensagem = "Erro!";
+        Response.Write("<script language='javascript'>alert('" + mensagem + "');</script>");
     }
 }

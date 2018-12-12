@@ -37,6 +37,7 @@ public partial class Paginas_insertMovimentacao : System.Web.UI.Page
 
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
+        string mensagem;
         Movimentacao mov = new Movimentacao();
         mov.Quantidade =Convert.ToDouble(txtQtd.Text);
 
@@ -57,7 +58,7 @@ public partial class Paginas_insertMovimentacao : System.Web.UI.Page
 
         if (MovimentacaoDB.Insert(mov))
         {
-            lbl.Text = "Cadastrado com sucesso!";
+            mensagem = "Cadastrado com sucesso!";
             txtQtd.Text = "";
             ddlLocal.SelectedIndex = 0;
             ddlTipo.SelectedIndex = 0;
@@ -65,6 +66,7 @@ public partial class Paginas_insertMovimentacao : System.Web.UI.Page
             txtQtd.Focus();
         }
         else
-            lbl.Text = "Erro!";
+            mensagem = "Erro!";
+        Response.Write("<script language='javascript'>alert('" + mensagem + "');</script>");
     }
 }
