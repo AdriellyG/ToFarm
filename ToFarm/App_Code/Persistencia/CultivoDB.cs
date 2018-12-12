@@ -48,6 +48,22 @@ public class CultivoDB
         return ds;
     }
 
+    public static DataSet SelectAllGrid()
+    {
+        DataSet ds = new DataSet();
+        System.Data.IDbConnection objConexao;
+        System.Data.IDbCommand objCommand;
+        System.Data.IDataAdapter objDataAdapter;
+        objConexao = Mapped.Connection();
+        objCommand = Mapped.Command("SELECT c.cul_nome as Nome, t.tip_nome as Tipo FROM cul_cultivo c inner join tic_tipo_cultivo t on t.tic_id = c.tic_id", objConexao);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        objDataAdapter.Fill(ds);
+        objConexao.Close();
+        objCommand.Dispose();
+        objConexao.Dispose();
+        return ds;
+    }
+
     // select id
     public Cultivo Select(int id)
     {

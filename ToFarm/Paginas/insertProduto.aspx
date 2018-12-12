@@ -18,6 +18,7 @@
         <div class="col-md-6">
             <br />
             <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" CssClass="btn btn-success" OnClick="btnCadastrar_Click"/>
+            <a class="btn btn-primary" href="exibirTipoCultivo.aspx">Voltar</a>
         </div>
         <div class="col-md-5">
             <br />

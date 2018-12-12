@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class Paginas_Default : System.Web.UI.Page
 {
+    private string mensagem;
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -22,12 +23,13 @@ public partial class Paginas_Default : System.Web.UI.Page
         
         if (t.Insert(tipo))
         {
-            lbl.Text = "Cadastrado com sucesso!";
+            mensagem = "Cadastrado com sucesso!";
             txtNome.Text = "";
             txtNome.Focus();
         }
         else
-            lbl.Text = "Erro!";
+            mensagem = "Erro!";
+        Response.Write("<script language='javascript'>alert('" + mensagem + "');</script>");
 
     }
 }
