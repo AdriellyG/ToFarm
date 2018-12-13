@@ -50,6 +50,9 @@
           <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="exibirProduto.aspx" role="tab" aria-controls="v-pills-profile" aria-selected="false">Produto</a>
           <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="exibirTipoProduto.aspx" role="tab" aria-controls="v-pills-messages" aria-selected="false">Tipo produto</a>
           <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="exibirTipoCultivo.aspx" role="tab" aria-controls="v-pills-settings" aria-selected="false">Tipo cultivo</a>
+         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="exibirMovimentacao.aspx" role="tab" aria-controls="v-pills-settings" aria-selected="false">Movimentação</a>
+         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="exibirTipoMovimentacao.aspx" role="tab" aria-controls="v-pills-settings" aria-selected="false">Tipo movimentação</a>
+         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="exibirLocalFisico.aspx" role="tab" aria-controls="v-pills-settings" aria-selected="false">Local físico</a>
         </div>
         <div class="tab-content" id="v-pills-tabContent">
           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>

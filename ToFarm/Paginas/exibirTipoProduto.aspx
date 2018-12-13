@@ -91,7 +91,7 @@
         </div>
         
         <div class="col-md-12">
-            <asp:GridView ID="gdv" runat="server" AutoGenerateColumns="False" PagerStyle-CssClass="pager" Width="100%" CssClass="mygrdContent" AllowPaging="False" RowStyle-CssClass="rows" HeaderStyle-CssClass="header">
+            <asp:GridView ID="gdv" runat="server" AutoGenerateColumns="False" PagerStyle-CssClass="pager" Width="90%" CssClass="mygrdContent" AllowPaging="False" RowStyle-CssClass="rows" HeaderStyle-CssClass="header">
                 <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="tip_nome" HeaderText="Nome" ControlStyle-CssClass="form-control" />

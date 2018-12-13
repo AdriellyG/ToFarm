@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Paginas/menuLateral.master" AutoEventWireup="true" CodeFile="exibirProduto.aspx.cs" Inherits="Paginas_exibirProduto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Paginas/menuLateral.master" AutoEventWireup="true" CodeFile="exibirMovimentacao.aspx.cs" Inherits="Paginas_exibirMovimentacao" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -81,11 +81,12 @@
         }
     </style>
     <div class="titulo">
-        <h2>Listar produtos</h2>
+        <h2>Listar movimentações</h2>
     </div>
     <div class="container">
+        
         <div class="col-md-12">
-            <a class="btn btn-success" href="insertProduto.aspx">Inserir novo registro</a>
+            <a class="btn btn-success" href="insertMovimentacao.aspx">Inserir novo registro</a>
             <br /><br />
         </div>
         
@@ -93,8 +94,10 @@
             <asp:GridView ID="gdv" runat="server" AutoGenerateColumns="False" PagerStyle-CssClass="pager" Width="90%" CssClass="mygrdContent" AllowPaging="False" RowStyle-CssClass="rows" HeaderStyle-CssClass="header">
                 <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
-                    <asp:BoundField DataField="Nome" HeaderText="Nome" ControlStyle-CssClass="form-control" />
+                    <asp:BoundField DataField="Produto" HeaderText="Produto" ControlStyle-CssClass="form-control" />
+                    <asp:BoundField DataField="Quantidade" HeaderText="Quantidade" ControlStyle-CssClass="form-control" />
                     <asp:BoundField DataField="Tipo" HeaderText="Tipo" ControlStyle-CssClass="form-control" />
+                    <asp:BoundField DataField="Local" HeaderText="Local" ControlStyle-CssClass="form-control" />
                 </Columns>
             </asp:GridView>
             <br /><br />

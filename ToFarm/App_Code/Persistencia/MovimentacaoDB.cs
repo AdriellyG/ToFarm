@@ -51,6 +51,31 @@ public class MovimentacaoDB
         return ds;
     }
 
+    public static DataSet SelectAllGrid()
+    {
+        string sql;
+        DataSet ds = new DataSet();
+        System.Data.IDbConnection objConexao;
+        System.Data.IDbCommand objCommand;
+        System.Data.IDataAdapter objDataAdapter;
+        objConexao = Mapped.Connection();
+
+        sql = "select m.mov_quantidade as Quantidade, p.pro_nome as Produto, t.tim_nome as Tipo, l.lof_nome as Local from mov_movimentacao m ";
+        sql += "inner join pro_produto p 		   on p.pro_id = m.pro_id ";
+        sql += "inner join lof_local_fisico l 	   on l.lof_id = m.lof_id ";
+        sql += "inner join tim_tipo_movimentacao t on t.tim_id = m.tim_id ";
+        sql += "order by p.pro_nome asc";
+
+        objCommand = Mapped.Command(sql, objConexao);
+
+        objDataAdapter = Mapped.Adapter(objCommand);
+        objDataAdapter.Fill(ds);
+        objConexao.Close();
+        objCommand.Dispose();
+        objConexao.Dispose();
+        return ds;
+    }
+
     public Movimentacao Select(int id)
     {
         Movimentacao obj = null;
